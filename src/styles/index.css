@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'tailwindcss';
+
+@theme {
+	--font-workSans: 'Work Sans', sans-serif;
+
+	--color-white: hsl(0, 100%, 100%);
+	--color-black: hsl(0, 0%, 0%);
+
+	--color-purple-100: hsl(275, 100%, 97%);
+	--color-purple-600: hsl(292, 16%, 49%);
+	--color-purple-950: hsl(292, 42%, 14%);
+
+	--color-violet-600: hsl(281, 83%, 54%);
+}
+
+@layer base {
+	html {
+		@apply scroll-smooth;
+	}
+
+	body {
+		@apply font-workSans antialiased
+
+		bg-[url('../assets/images/background-pattern-mobile.svg')]
+		xl:bg-[url('../assets/images/background-pattern-desktop.svg')]
+
+		bg-no-repeat bg-top bg-cover;
+	}
+}
+
+@utility text-preset1 {
+	font-size: 3.5rem;
+	font-weight: 700;
+	line-height: 4.125rem;
+	letter-spacing: 0;
+}
+
+@utility text-preset2 {
+	font-size: 1.125rem;
+	font-weight: 600;
+	line-height: 1.3125rem;
+	letter-spacing: 0;
+}
+
+@utility text-preset3 {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5rem;
+	letter-spacing: 0;
+}
